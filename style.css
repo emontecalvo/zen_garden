@@ -43,7 +43,7 @@ body {
 	align-items: center;
 	flex-wrap: wrap;
   align-items: flex-start;
-  font-family: lucida grande;
+  font-family: "lucida grande";
   position: relative;
 }
 
@@ -71,9 +71,6 @@ header[role=banner] {
    background-size: 100%;
    height: 400px;
    align-self: center;
-   /*padding-top: 50%;*/
-   /*width: 100%;*/
-   /*color: white;*/
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -83,15 +80,14 @@ header[role=banner] {
  #zen-summary {
   border-top: 50px solid black;
   margin-top: -5px;
+  padding: 12px;
  }
 
 
 
 .intro {
-	/*flex: 5;*/
 	min-width: 100%;
   text-align: center;
-  /*color: #d8fefe;*/
 }
 
 .preamble>p {
@@ -101,11 +97,8 @@ header[role=banner] {
 }
 
 .main {
-/*  display: flex;
-  flex-wrap: wrap;*/
 	flex: 2;
-  /*color: #e9fffe;*/
-  padding: 0 15px 0 80px;
+  padding: 0 15px 0 40px;
   margin-bottom: 200px;
   height: 500px;
   overflow: scroll;
@@ -118,29 +111,77 @@ footer {
   height: 100px;
   width: 100%;
   text-align: center;
+  clear: both;
 }
 
 
 .sidebar {
 	margin-right: auto;
 	flex: 1;
-  /*order: 1;*/
+  line-height: 1.5;
+  background: #252731;
+  opacity: 0.5;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
   color: #cbd7d3;
+  text-decoration: none;
 }
 
-@media (max-width: 720px) {
-  .hide-when-small {
-    display: none;
+a:hover {
+  font-size: larger;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .sidebar {
+    margin-left: 350px;
   }
 }
 
-@media (min-width: 720px) {
-  .hide-when-large {
-    display: none;
+@media (max-width: 700px) {
+  .page-wrapper {
+    flex-direction: column;
   }
-}
 
+  .main {
+    flex-grow: 5;
+    padding: 20px;
+    margin-bottom: 0;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .sidebar {
+    flex-grow: 1;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .sidebar li {
+    padding-right: 10px;
+  }
+
+  #zen-summary {
+  border-top: 0;
+  margin-top: 0;
+  padding: 12px;
+ }
+
+ footer {
+  height: 20px;
+ }
+}
 
