@@ -38,7 +38,7 @@ Make it responsive
 
 
 section {
-	flex: 2;
+	flex: 5;
 	min-width: 100%;
 }
 
