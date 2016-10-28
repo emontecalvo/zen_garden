@@ -1,0 +1,69 @@
+/*/*/
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+
+/*https://www.youtube.com/watch?v=wFzkN_TSVrM
+*/
+
+
+
+/*http://www.shutterstock.com/video/clip-16632211-stock-footage-space-flight-through-nebula-space-travel-space-animation-background-with-purple-nebula-many.html?src=rel/11583017:2/3p*/
+
+/* basic elements */
+
+
+/*apply Flexbox
+Apply transition
+Apply Webfonts
+Make it beautiful
+Make it usable
+Make it responsive
+*/
+
+
+/*OUTER FLEXBOX*/
+.page-wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+section {
+	flex: 2;
+	min-width: 100%;
+}
+
+.main {
+	flex: 1;
+}
+
+
+.sidebar {
+	margin-right: auto;
+	flex: 1;
+}
+
+
+
+@media (max-width: 720px) {
+  .hide-when-small {
+    display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  .hide-when-large {
+    display: none;
+  }
+}
+
+
